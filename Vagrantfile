@@ -14,7 +14,10 @@ export DEBIAN_FRONTEND=noninteractive;
 apt-get update;
 
 # Install Apache/MySQL
-apt-get -y install apache2 php5 php5-mysql mysql-server mysql-client unzip;
+apt-get -y install apache2 php5 php5-mysql mysql-server mysql-client unzip php5-dev;
+
+# Install xedbug
+sudo pecl install xdebug
 
 # Download and uncompress WordPress
 wget https://wordpress.org/latest.zip -O /tmp/wordpress.zip;
